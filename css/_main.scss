@@ -1,0 +1,144 @@
+.dictionary{
+    text-align: center;
+    margin: 2em 0;
+    font-size: 1.2em;
+    color: $blue;
+}
+
+// FORM
+
+form{
+    display: flex;
+    gap: .5em;
+    background-color: lightgrey;
+    border-radius: 1.2em;
+
+    #input__user{
+        border: none;
+        width: 90%;
+        outline: none;
+        background-color: lightgrey;
+        padding: .7em;
+        font-size: 1.2em;
+        border-top-left-radius: 1em;
+        border-bottom-left-radius: 1em;
+
+        &:focus{
+            background-color: lightgrey;
+        }
+    }
+
+    .btn-search{
+        width: 2em;
+        height: 2em;
+        align-self: center;
+        margin-right: 1em;
+    }
+}
+
+// SECTION WORD
+
+.section__word{
+    display: flex;
+    justify-content: space-between;
+
+    &--audio{
+        background: $blue-alt;
+        align-self: center;
+        border-radius: 50%;
+        width: 3em;
+        height: 3em;
+        transform: translateY(50%);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .icon-play{
+            width: 1.2em;
+            height: 1.2em;
+            color: $blue;
+        }
+    }
+
+    &--title{
+        font-size: 2.5em;
+        margin-bottom: .1em;
+    }
+
+    &--phonetic{
+        color: $blue;
+    }
+
+    
+}
+
+
+
+
+// SECTION NOUN
+
+.section__noun{
+    color: var(--color-text-principal);
+    margin: 2em 0;
+        
+    @include H2();
+
+    h3{
+        color: $gray;
+    }
+
+    @include listDefinitions();
+
+    .synonym{
+        display: flex;
+        gap: 1em;
+        & > span:first-child{
+            color: $gray;
+        }
+
+        & > span:last-child{
+            color: $blue;
+            font-weight: bold;
+        }
+    }
+}
+
+
+// SECTION VERB
+
+.section__verb{
+    color: var(--color-text-principal);
+    margin-bottom: 2em;
+
+    @include H2();
+
+    h3{
+        color: $gray;
+    }
+
+    @include listDefinitions();
+
+    &--example{
+        margin-top: .6em;
+        color: $gray;
+    }
+}
+
+
+// SOURCE
+
+.source{
+    color: $gray;
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+
+    a{
+        color: var(--color-text-principal);
+
+        i{
+            transform: translateY(10%);
+        }
+    }
+}

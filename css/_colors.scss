@@ -1,0 +1,15 @@
+$gray: rgb(142, 142, 142);
+$blue: blue;
+$blue-alt: rgba(0, 0, 255, 0.459);
+
+:root{
+    --body : white;
+    --text-principal : rgb(51, 51, 51);
+    --titre : black;
+    --border : rgb(237, 237, 237);
+
+    --color-body : var(--body);
+    --color-text-principal : var(--text-principal);
+    --color-tritre : var(--titre);
+    --color-border : var(--border)
+}

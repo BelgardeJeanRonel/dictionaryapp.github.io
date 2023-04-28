@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+}
+
+// ---------------------------------------->   MIXINS
+
+@mixin H2 {
+    h2{
+        position: relative;
+
+        &::after{
+            content: "";
+            display: block;
+            border-bottom: 1px solid var(--color-border);
+            position: absolute;
+            width: calc(100% - 2.9em);
+            left: 2.5em;
+            bottom: 40%;
+        }
+    }
+    
+}
+
+@mixin listDefinitions {
+    ul{
+        list-style: none;
+        padding: 1em;
+        & li::before{
+            content: "\2022";
+            color: $blue;
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+            font-size: 1.2em;
+        }
+    }
+}
+
+
+@import "_colors";
+
+.theme-dark{
+    --color-body : rgba(0, 0, 0, 0.908);
+    --color-text-principal : white;
+    --color-border : rgba(255, 255, 255, 0.223);
+}
+
+body{
+    margin: 0;
+    background: var(--color-body);
+    color: var(--color-text-principal);
+    font-family: sans-serif;
+}
+
+.wrapper{
+    max-width: 700px;
+    margin: auto;
+    padding: 1em;
+}
+
+
+// -------------- HEADER STYLE-----------------
+
+@import "_header";
+
+
+// -------------- MAIN STYLE-----------------
+
+@import "_main";
+
+// Theme Dark
+
+// .theme-dark{
+//     --body : black;
+//     --text-principal : rgb(51, 51, 51);
+// }
