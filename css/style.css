@@ -36,7 +36,7 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1.5em;
+  margin-bottom: 5em;
 }
 .header .book-logo {
   width: 2.5em;
@@ -45,21 +45,40 @@ body {
 .header__right {
   display: flex;
   align-items: center;
-  gap: 1.5em;
+  gap: 0.7em;
 }
 .header__right .btn-serif {
-  border: none;
-  background: none;
   border-right: 1px solid rgb(183, 183, 183);
-  padding: 0.5em 1.5em 0.5em 0;
+  padding: 0.5em 1em 0.5em 0;
   display: flex;
   gap: 0.5em;
+  color: var(--color-text-principal);
+  position: relative;
+  cursor: pointer;
+}
+.header__right .btn-serif ul {
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  margin-top: 1.5em;
+  display: none;
+}
+.header__right .btn-serif ul li {
+  margin-top: 0.3em;
+}
+.header__right .btn-serif ul li:hover {
+  -webkit-text-decoration: underline rgb(47, 0, 255);
+          text-decoration: underline rgb(47, 0, 255);
+  opacity: 0.9;
+}
+.header__right .btn-serif ul.ul-on {
+  display: block;
 }
 .header__right .btn-serif .icon-arrow {
-  width: 1em;
-  height: 1em;
-  transform: translateY(10%);
+  width: 0.7em;
+  height: 0.7em;
   color: rgb(47, 0, 255);
+  transform: translateY(30%);
 }
 .header__right .mode {
   display: flex;
@@ -75,9 +94,9 @@ body {
   color: rgb(47, 0, 255);
   padding: 0.1em;
 }
-.header__right .mode .mode__btn div {
-  width: 0.9em;
-  height: 0.9em;
+.header__right .mode .mode__btn .circle {
+  width: 1em;
+  height: 1em;
   background: white;
   border-radius: 50%;
   float: left;
@@ -153,15 +172,19 @@ form .btn-search {
   margin: 2em 0;
 }
 .section__noun h2 {
-  position: relative;
+  display: flex;
+  gap: 1em;
 }
-.section__noun h2::after {
+.section__noun h2 div {
+  position: relative;
+  width: 100%;
+}
+.section__noun h2 div::after {
   content: "";
-  display: block;
+  display: inline-block;
   border-bottom: 1px solid var(--color-border);
   position: absolute;
-  width: calc(100% - 2.9em);
-  left: 2.5em;
+  width: 100%;
   bottom: 40%;
 }
 .section__noun h3 {
@@ -197,15 +220,19 @@ form .btn-search {
   margin-bottom: 2em;
 }
 .section__verb h2 {
-  position: relative;
+  display: flex;
+  gap: 1em;
 }
-.section__verb h2::after {
+.section__verb h2 div {
+  position: relative;
+  width: 100%;
+}
+.section__verb h2 div::after {
   content: "";
-  display: block;
+  display: inline-block;
   border-bottom: 1px solid var(--color-border);
   position: absolute;
-  width: calc(100% - 2.9em);
-  left: 2.5em;
+  width: 100%;
   bottom: 40%;
 }
 .section__verb h3 {
@@ -240,4 +267,12 @@ form .btn-search {
 }
 .source a i {
   transform: translateY(10%);
+}
+
+footer {
+  margin-top: 4em;
+  text-align: center;
+}
+footer span {
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */

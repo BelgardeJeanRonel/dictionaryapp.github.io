@@ -13,11 +13,11 @@ export function createTemplate() {
         
         <div class="section__word--audio">
           <svg class="icon-play">
-            <use xlink:href="svg/spritePlay.svg#play"></use>
+            <use xlink:href="svg/SpritePlay.svg#play"></use>
           </svg>
         </div>`;
     document.querySelector(".section__noun").innerHTML = `
-    <h2></h2>
+    <h2><div></div></h2>
 
         <h3></h3>
         <ul>
@@ -26,7 +26,7 @@ export function createTemplate() {
 
         <div class="synonym"><span></span> <span></span></div>`;
     document.querySelector(".section__verb").innerHTML = `
-    <h2></h2>
+    <h2><div></div></h2>
 
         <h3></h3>
         <ul>

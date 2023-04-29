@@ -1,44 +1,5 @@
 import { createElement, createTemplate } from "./functions.js";
 
-// function createElement (tagName) {
-//     const element = document.createElement(tagName);
-  
-//     return element;
-// }
-
-// function createTemplate() {
-//     document.querySelector(".section__word").innerHTML = `
-//         <div>
-//           <h1 class="section__word--title"></h1>
-//           <span class="section__word--phonetic"></span>
-//         </div>
-        
-//         <div class="section__word--audio">
-//           <svg class="icon-play">
-//             <use xlink:href="svg/SpritePlay.svg#play"></use>
-//           </svg>
-//         </div>`;
-//     document.querySelector(".section__noun").innerHTML = `
-//     <h2></h2>
-
-//         <h3></h3>
-//         <ul>
-
-//         </ul>
-
-//         <div class="synonym"><span></span> <span></span></div>`;
-//     document.querySelector(".section__verb").innerHTML = `
-//     <h2></h2>
-
-//         <h3></h3>
-//         <ul>
-
-//         </ul>`;
-//     document.querySelector(".source").innerHTML = `
-//     <span></span><a href="" target="_blank"> <i class="fa fa-external-link"></i></a>`;
-// }
-
-
 async function fetchJSON(url, options = {}) {
 
     const headers = {Accept : "application/json", ...options.headers};
@@ -73,12 +34,10 @@ export const dictionaryApi = {
                 event.preventDefault();
                 const inputUser = document.querySelector("#input__user").value;
                 const word = await fetchJSON(`https://api.dictionaryapi.dev/api/v2/entries/en/${inputUser}`);
-                console.log(word);
 
                 if (inputUser) {
                     createTemplate();
 
-                    console.log(createTemplate);
 
                     const wordTitle = document.querySelector(".section__word--title");
                     const phonetic = document.querySelector(".section__word--phonetic");
@@ -124,7 +83,8 @@ export const dictionaryApi = {
             
                     // NOUN
             
-                    h2SectionNoun.textContent = word[0].meanings[0].partOfSpeech;
+                    // h2SectionNoun.textContent = word[0].meanings[0].partOfSpeech;
+                    h2SectionNoun.prepend(word[0].meanings[0].partOfSpeech);
                     h3SectionNoun.textContent = "Meaning";
             
                     if (word[0].meanings[0].synonyms[0]) {
@@ -139,7 +99,6 @@ export const dictionaryApi = {
                     for (const def of nounMeaning) {
                     
                         const newLiElement = createElement("li");
-                        console.log(newLiElement);
                         newLiElement.textContent = def.definition;
             
                         ulNounElement.append(newLiElement);
@@ -148,7 +107,8 @@ export const dictionaryApi = {
             
                     // VERB
             
-                    h2SectionVerb.textContent = word[0].meanings[1].partOfSpeech;
+                    // h2SectionVerb.textContent = word[0].meanings[1].partOfSpeech;
+                    h2SectionVerb.prepend(word[0].meanings[1].partOfSpeech);
                     h3SectionVerb.textContent = "Meaning";
             
                     const verbMeaning = word[0].meanings[1].definitions
