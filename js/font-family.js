@@ -82,7 +82,8 @@ export const fontFamily = {
             document.body.style.fontFamily = "sans-serif";
             inputUser.style.fontFamily = "sans-serif";
             textValue.innerHTML = "Sans serif";
-        }else{
+        }
+        if (fontFamily === "serif"){
             document.body.style.fontFamily = "serif";
             inputUser.style.fontFamily = "serif";
             textValue.innerHTML = "Serif";
