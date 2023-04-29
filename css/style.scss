@@ -29,16 +29,19 @@
     ul{
         list-style: none;
         padding: 1em;
-        & li::before{
-            content: "\2022";
-            color: $blue;
-            font-weight: bold;
-            display: inline-block; 
-            width: 1em;
-            margin-left: -1em;
-            font-size: 1.2em;
-            // font-family: serif
+        li{
+            margin-bottom: .5em;
+            &::before{
+                content: "\2022";
+                color: $blue;
+                font-weight: bold;
+                display: inline-block; 
+                width: 1em;
+                margin-left: -1em;
+                font-size: 1.2em;
+            }
         }
+        
     }
 }
 
