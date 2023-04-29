@@ -15,7 +15,7 @@ function createTemplate() {
         
         <div class="section__word--audio">
           <svg class="icon-play">
-            <use xlink:href="svg/spritePlay.svg#play"></use>
+            <use xlink:href="svg/SpritePlay.svg#play"></use>
           </svg>
         </div>`;
     document.querySelector(".section__noun").innerHTML = `
