@@ -59,7 +59,7 @@ body {
   width: 1em;
   height: 1em;
   transform: translateY(10%);
-  color: blue;
+  color: rgb(47, 0, 255);
 }
 .header__right .mode {
   display: flex;
@@ -72,7 +72,7 @@ body {
   width: 2.5em;
   height: 100%;
   border-radius: 1em;
-  color: blue;
+  color: rgb(47, 0, 255);
   padding: 0.1em;
 }
 .header__right .mode .mode__btn div {
@@ -90,7 +90,7 @@ body {
   text-align: center;
   margin: 2em 0;
   font-size: 1.2em;
-  color: blue;
+  color: rgb(47, 0, 255);
 }
 
 form {
@@ -138,14 +138,14 @@ form .btn-search {
 .section__word--audio .icon-play {
   width: 1.2em;
   height: 1.2em;
-  color: blue;
+  color: rgb(47, 0, 255);
 }
 .section__word--title {
   font-size: 2.5em;
   margin-bottom: 0.1em;
 }
 .section__word--phonetic {
-  color: blue;
+  color: rgb(47, 0, 255);
 }
 
 .section__noun {
@@ -173,7 +173,7 @@ form .btn-search {
 }
 .section__noun ul li::before {
   content: "•";
-  color: blue;
+  color: rgb(47, 0, 255);
   font-weight: bold;
   display: inline-block;
   width: 1em;
@@ -188,7 +188,7 @@ form .btn-search {
   color: rgb(142, 142, 142);
 }
 .section__noun .synonym > span:last-child {
-  color: blue;
+  color: rgb(47, 0, 255);
   font-weight: bold;
 }
 
@@ -217,7 +217,7 @@ form .btn-search {
 }
 .section__verb ul li::before {
   content: "•";
-  color: blue;
+  color: rgb(47, 0, 255);
   font-weight: bold;
   display: inline-block;
   width: 1em;
